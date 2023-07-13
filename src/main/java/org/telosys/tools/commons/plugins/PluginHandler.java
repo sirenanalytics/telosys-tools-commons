@@ -1,5 +1,6 @@
 package org.telosys.tools.commons.plugins;
 
+import java.io.File;
 import java.util.List;
 
 public class PluginHandler {
@@ -26,6 +27,14 @@ public class PluginHandler {
 		if (plugin != null) {
 			plugin.putGeneratorContexts(/*GeneratorContext*/ generatorContext, /*Model*/ model, bundleName) ;
 		}
+	}
+
+	public static /*ParsingResult*/ Object parseModel(File modelFolder) {
+		IPlugin plugin = getPlugin();
+		if (plugin != null) {
+			return plugin.parseModel(modelFolder);
+		}
+		return null;
 	}
 	
 }
