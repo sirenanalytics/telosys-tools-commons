@@ -39,4 +39,27 @@ public class PluginHandler {
 		return null;
 	}
 	
+	public static /*LinkInContext*/ Object newLinkInContext(/*EntityInContext*/ Object entity, /*Link*/ Object link, /*ModelInContext*/ Object modelInContext, /*EnvInContext*/ Object envInContext) {
+		IPlugin plugin = getPlugin();
+		if (plugin != null) {
+			return plugin.newLinkInContext(entity, link, modelInContext, envInContext);
+		}
+		return null;		
+	}
+	
+	public static /*AttributeInContext*/ Object newAttributeInContext(/*EntityInContext*/ Object entity, /*Attribute*/ Object attribute, /*ModelInContext*/ Object modelInContext, /*EnvInContext*/ Object envInContext) {
+		IPlugin plugin = getPlugin();
+		if (plugin != null) {
+			return plugin.newAttributeInContext(entity, attribute, modelInContext, envInContext);
+		}
+		return null;		
+	}
+	
+	public static /*EntityInContext*/ Object newEntityInContext(/*Entity*/ Object entity, String defaultEntityPackage, /*ModelInContext*/ Object modelInContext, /*EnvInContext*/ Object env) {
+		IPlugin plugin = getPlugin();
+		if (plugin != null) {
+			return plugin.newEntityInContext(entity, defaultEntityPackage, modelInContext, env);
+		}
+		return null;
+	}
 }

@@ -11,5 +11,11 @@ public interface IPlugin {
 	public IPluginAnnotationData newPluginAnnotationData();
 	public void putGeneratorContexts(/*GeneratorContext*/ Object generatorContext, TelosysToolsCfg telosysToolsCfg, /*Model*/ Object model, String bundleName);
 
-	public /*ParsingResult*/ Object parseModel(File modelFolder);	
+	public /*ParsingResult*/ Object parseModel(File modelFolder);
+	
+	public /*LinkInContext*/ Object newLinkInContext(/*EntityInContext*/ Object entity, /*Link*/ Object link, /*ModelInContext*/ Object modelInContext, /*EnvInContext*/ Object envInContext);	
+
+	public /*AttributeInContext*/ Object newAttributeInContext(/*EntityInContext*/ Object entity, /*Attribute*/ Object attribute, /*ModelInContext*/ Object modelInContext, /*EnvInContext*/ Object env);
+	
+	public /*EntityInContext*/ Object newEntityInContext(/*Entity*/ Object entity, String defaultEntityPackage, /*ModelInContext*/ Object modelInContext, /*EnvInContext*/ Object env);	
 }
