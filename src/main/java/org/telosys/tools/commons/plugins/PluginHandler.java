@@ -3,6 +3,8 @@ package org.telosys.tools.commons.plugins;
 import java.io.File;
 import java.util.List;
 
+import org.telosys.tools.commons.cfg.TelosysToolsCfg;
+
 public class PluginHandler {
 
 	public static IPlugin plugin;
@@ -22,10 +24,10 @@ public class PluginHandler {
 		}
 	}
 	
-	public static void putGeneratorContexts(/*GeneratorContext*/ Object generatorContext, /*Model*/ Object model, String bundleName) {
+	public static void putGeneratorContexts(/*GeneratorContext*/ Object generatorContext, TelosysToolsCfg telosysToolsCfg, /*Model*/ Object model, String bundleName) {
 		IPlugin plugin = getPlugin();
 		if (plugin != null) {
-			plugin.putGeneratorContexts(/*GeneratorContext*/ generatorContext, /*Model*/ model, bundleName) ;
+			plugin.putGeneratorContexts(/*GeneratorContext*/ generatorContext, telosysToolsCfg, /*Model*/ model, bundleName) ;
 		}
 	}
 
