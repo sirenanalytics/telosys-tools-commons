@@ -6,13 +6,13 @@
 	<parent>
 		<groupId>org.telosys</groupId>
 		<artifactId>telosys-tools-parent</artifactId>
-		<version>4.0.1</version>
+		<version>4.x.x</version>
 		<relativePath>../telosys-tools-parent/pom.xml</relativePath>
 	</parent>
 
 	<name>telosys-tools-commons</name>
 	<artifactId>telosys-tools-commons</artifactId>
-	<version>4.0.1</version>
+	<version>4.1.0</version>
 	<packaging>jar</packaging>
 
 
